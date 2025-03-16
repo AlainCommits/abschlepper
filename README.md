@@ -2,6 +2,8 @@
 
 Hier hast du die Anleitung zu deiner Seite. Ich hab sie dir als statische Website gebaut damit du sie einfach auf webgo hosten kannst. Die Bilder usw. lädst du dann einfach wie immer über FTP hoch. Ich denke du kannst sie auch bei wordpress hochladen, habe versucht sie als template dafür zu erstellen und sie besteht nur aus HTML, CSS, Javascript nur fürs frontend und PHP also genauso wie eure Wordpressseiten. Wenn alles klapp kannst du sie einfach darüber bearbeiten sonst lad dir vs code oder so runter.
 
+Du kannst dir Seite zum entwickeln einfach auf einem lokelen server starten indem du doppelklick auf die dev-server.bat machst und dann auf http://localhost:8000 gehst.
+
 # Variante 1: Direkt bei Webgo hosten
 
 ## 1. Seite hochladen
