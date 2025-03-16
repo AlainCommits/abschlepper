@@ -2,75 +2,135 @@
 
 Hier hast du die Anleitung zu deiner Seite. Ich hab sie dir als statische Website gebaut damit du sie einfach auf webgo hosten kannst. Die Bilder usw. lädst du dann einfach wie immer über FTP hoch. Ich denke du kannst sie auch bei wordpress hochladen, habe versucht sie als template dafür zu erstellen und sie besteht nur aus HTML, CSS, Javascript nur fürs frontend und PHP also genauso wie eure Wordpressseiten. Wenn alles klapp kannst du sie einfach darüber bearbeiten sonst lad dir vs code oder so runter.
 
-## Installation als PHP-Website
+# Variante 1: Direkt bei Webgo hosten
 
-### Lokale Entwicklung
-1. PHP installieren (7.4 oder höher):
-```bash
-./install-php.sh   # Für Mac
-```
+## 1. Seite hochladen
 
-2. Development Server starten:
-```bash
-# Windows:
-dev-server.bat
+### Bei Webgo einloggen
+1. Geh auf www.webgo.de
+2. Mit deinen Zugangsdaten einloggen
+3. "Hosting" auswählen
 
-# Mac/Linux:
-chmod +x dev-server.sh
-./dev-server.sh
-```
+### FileZilla einrichten
+1. FileZilla herunterladen und installieren
+2. Neue Verbindung:
+   - Server: Aus Webgo E-Mail kopieren
+   - Benutzername: Aus Webgo E-Mail
+   - Passwort: Aus Webgo E-Mail
+3. Alle Dateien ins `htdocs` oder `www` ziehen
 
-Die Website ist dann unter http://localhost:8000 erreichbar.
+## 2. Firmendaten & Texte ändern
 
-### Kontaktformular einrichten
+### Die wichtigsten Dateien
+- `includes/config.php`: Hier stehen alle Texte
+- `assets/images/`: Hier kommen alle Bilder rein 
 
-#### Ohne WordPress
-1. Email-Server auf deinem Hosting konfigurieren
-2. In `includes/config.php` die Emailadresse anpassen
-3. Das Formular sendet automatisch an diese Adresse
+### Firmendaten eintragen
+1. `config.php` mit Editor (Notepad++ oder VS Code) öffnen
+2. Suche nach:
+   ```php
+   // Firmendaten
+   'name' => 'Name ändern',      // Dein Firmenname
+   'phone' => '0123 456789',     // Deine Nummer
+   'email' => 'mail@domain.de',  // Deine Email
+   'address' => 'Straße ...',    // Deine Adresse
+   ```
+3. Text zwischen den Anführungszeichen ändern
+4. Speichern und hochladen
 
-#### Mit WordPress
-1. Plugin "Contact Form 7" installieren
-2. Neues Formular erstellen mit diesen Feldern:
-   - Name (Pflichtfeld)
-   - Email (Pflichtfeld)
+### Einsatzgebiete ändern
+1. In `config.php`:
+   ```php
+   'serviceAreas' => [
+       'Hamburg',    // Diese Orte
+       'Bremen',     // einfach anpassen
+       'Hannover'    // oder neue hinzufügen
+   ],
+   ```
+
+### Leistungen/Services
+1. In `config.php`:
+   ```php
+   'services' => [
+       [
+           'title' => 'Pannenhilfe',     // Titel ändern
+           'description' => '...',        // Text ändern
+           'icon' => 'fa-wrench'         // Icon aus FontAwesome
+       ],
+   ```
+
+## 3. Bilder austauschen
+
+### Startseite
+1. Diese Bilder brauchst du:
+   - `hero-bg.jpg`: Großes Titelbild (1920x1080px)
+   - `about-img.jpg`: Bild bei "Über uns" (800x600px)
+   - `service-1/2/3.jpg`: Leistungsbilder (600x400px)
+
+2. So bereitest du die Bilder vor:
+   - Auf richtige Größe bringen
+   - Auf tinypng.com kleiner machen
+   - Genau so benennen wie die alten
+   - Per FileZilla in `assets/images` hochladen
+
+### Weitere Bilder
+- `logo.png`: Dein Firmenlogo
+- `favicon.ico`: Browser-Icon
+- `team.jpg`: Team-Foto für "Über uns"
+
+## 4. E-Mail-Formular & SSL
+
+### Kontaktformular aktivieren
+1. Im Webgo Control Panel:
+   - "E-Mail" → "PHP Mail"
+   - Deine E-Mail als Absender eintragen
+
+### SSL einrichten
+1. Im Webgo Control Panel:
+   - "SSL/TLS" → "Let's Encrypt"
+   - Domain auswählen
+   - Zertifikat erstellen
+
+# Variante 2: Mit WordPress
+
+## 1. WordPress installieren
+
+### Bei Webgo
+1. Control Panel → "WordPress"
+2. "Neue Installation"
+3. Domain auswählen
+4. Admin-Daten eingeben
+
+## 2. Theme installieren
+
+### Theme hochladen
+1. WordPress Admin → "Design" → "Themes"
+2. "Theme hochladen" klicken
+3. `wordpress-theme` Ordner als ZIP hochladen
+4. Theme aktivieren
+
+## 3. Inhalte bearbeiten
+
+### Firmendaten
+1. "Theme Einstellungen" im Menü
+2. Alle Daten eintragen:
+   - Firmenname
    - Telefon
-   - Betreff
-   - Nachricht
-3. Formular-Shortcode in die contact.php einfügen
+   - E-Mail
+   - Adresse
+   - Öffnungszeiten
 
-### WordPress Konvertierung
+### Bilder & Texte
+1. Seiten im Menü:
+   - "Startseite"
+   - "Über uns" 
+   - "Leistungen"
+   - "Kontakt"
+2. Mit WordPress Editor bearbeiten
+3. Bilder über Mediathek hochladen
 
-Um die Seite als WordPress-Theme zu nutzen:
-
-1. Neues Theme-Verzeichnis erstellen:
-```
-wp-content/themes/abschleppdienst/
-```
-
-2. Dateien anpassen:
-- index.php → front-page.php
-- pages/about.php → page-about.php 
-- pages/services.php → page-services.php
-- etc.
-
-3. WordPress-spezifische Funktionen hinzufügen:
-- style.css mit Theme-Header
-- functions.php für Menüs und Features
-- header.php/footer.php anpassen
-
-4. Inhalte in WordPress-Editor übertragen:
-- Seiten anlegen für About, Services etc.
-- Menüs in WordPress erstellen
-- Widgets für Footer einrichten
-
-### Hosting / Upload
-
-1. Dateien per FTP hochladen
-2. Dateirechte setzen:
-   - Dateien: 644
-   - Ordner: 755
-   
-3. .htaccess und PHP-Einstellungen prüfen
-
+### Kontaktformular
+1. Plugin "Contact Form 7" installieren
+2. Neues Formular erstellen
+3. Shortcode in Kontaktseite einfügen
 
