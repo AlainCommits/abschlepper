@@ -1,6 +1,6 @@
 # Abschleppdienst Website
 
-Hier hast du die Anleitung zu deiner Seite. Ich hab sie dir als statische Website gebaut damit du sie einfach auf webgo hosten kannst. Die Bilder usw. lädst du dann einfach wie immer über FTP hoch. Ich denke du kannst sie auch bei wordpress hochladen, sie besteht nur aus HTML, CSS, Javascript nur fürs frontend und PHP also genauso wie eure Wordpressseiten. Wenn alles klapp kannst du sie einfach darüber bearbeiten sonst lad dir vs code oder so runter.
+Hier hast du die Anleitung zu deiner Seite. Ich hab sie dir als statische Website gebaut damit du sie einfach auf webgo hosten kannst. Die Bilder usw. lädst du dann einfach wie immer über FTP hoch. Ich denke du kannst sie auch bei wordpress hochladen, habe versucht sie als template dafür zu erstellen und sie besteht nur aus HTML, CSS, Javascript nur fürs frontend und PHP also genauso wie eure Wordpressseiten. Wenn alles klapp kannst du sie einfach darüber bearbeiten sonst lad dir vs code oder so runter.
 
 ## Installation als PHP-Website
 
@@ -73,9 +73,4 @@ wp-content/themes/abschleppdienst/
    
 3. .htaccess und PHP-Einstellungen prüfen
 
-## Support
 
-Bei Fragen oder Problemen:
-
-- PHP-Website: Code anpassen in config.php
-- WordPress: Adminbereich → Einstellungen
