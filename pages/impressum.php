@@ -34,24 +34,24 @@ require_once '../includes/header.php';
                             E-Mail: <?php echo $companyData['email']; ?>
                         </p>
 
-                        <h3 class="h4 mt-4">Umsatzsteuer-ID</h3>
+                        <!-- <h3 class="h4 mt-4">Umsatzsteuer-ID</h3>
                         <p>
                             Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
                             [Ihre USt-IdNr]
-                        </p>
+                        </p> -->
 
-                        <h3 class="h4 mt-4">Aufsichtsbehörde</h3>
+                        <!-- <h3 class="h4 mt-4">Aufsichtsbehörde</h3>
                         <p>
                             [Name der zuständigen Aufsichtsbehörde]<br>
                             [Anschrift der Aufsichtsbehörde]
-                        </p>
+                        </p> -->
 
-                        <h3 class="h4 mt-4">Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+                        <!-- <h3 class="h4 mt-4">Berufsbezeichnung und berufsrechtliche Regelungen</h3>
                         <p>
                             Berufsbezeichnung: Abschleppdienst<br>
                             Zuständige Kammer: [Name der Kammer]<br>
                             Verliehen in: Deutschland
-                        </p>
+                        </p> -->
 
                         <h3 class="h4 mt-4">Streitschlichtung</h3>
                         <p>

@@ -44,7 +44,7 @@ require_once '../includes/header.php';
             </div>
             <div class="col-lg-6">
                 <div class="about-image rounded shadow-lg">
-                    <img src="<?php echo $relative_path; ?>assets/images/about-img.jpg" alt="Unser Team" class="img-fluid rounded">
+                    <!-- <img src="<?php echo $relative_path; ?>assets/images/about.jpg" alt="Unser Team" class="img-fluid rounded"> -->
                 </div>
             </div>
         </div>

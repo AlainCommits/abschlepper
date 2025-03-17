@@ -3,6 +3,11 @@
     --primary: #dc3545;
     --secondary: #343a40;
     --accent: #ffc107;
+    --logo-image: url('../images/logo.jpg');
+    --hero-image: url('../images/hero.jpg');
+    --about-image: url('../images/about.jpg');
+    --logo-height: 40px;
+    --logo-width: auto;
 }
 
 body {
@@ -23,6 +28,14 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: var(--logo-height);
+    width: var(--logo-width);
+    margin-right: 10px;
 }
 
 .nav-link.btn-danger {
@@ -63,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero-bg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), var(--hero-image);
     background-size: cover;
     background-position: center;
     color: white;
@@ -164,6 +177,37 @@ h1, h2, h3, h4, h5, h6 {
     background-color: white;
     padding: 1rem;
     cursor: pointer;
+}
+
+/* About Section */
+.about-image {
+    background-image: var(--about-image);
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    padding: 2rem;
+}
+
+/* Image Display */
+.img-container {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.img-container:hover img {
+    transform: scale(1.05);
 }
 
 /* Responsive Adjustments */

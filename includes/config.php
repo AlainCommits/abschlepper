@@ -1,11 +1,11 @@
 <?php
 // Company Information
 $companyData = [
-    'name' => 'Abschleppdienst Altenessen',
-    'phone' => '0176 735506639999999',
-    'phoneLink' => '+4917673550663999',
+    'name' => 'Abschleppdienst Spuling',
+    'phone' => '0178 836 9012',
+    'phoneLink' => '+491788369012',
     'address' => 'Essen, Nordrhein-Westfalen',
-    'email' => 'info@abschleppdienst-altenessen.de',
+    'email' => 'abschlepperspuling@outlook.de',
     'hours' => '24/7',
     'serviceAreas' => [
         'Essen',
@@ -25,6 +25,12 @@ $companyData = [
         'primary' => '#dc3545',   
         'secondary' => '#343a40',  
         'accent' => '#ffc107'      
+    ],
+    // Bilder für die Seite - wenn du sie ändern willst musst du nur neue Bilder mit dem selben Namen in den assets/images packen und die alten löschen
+    
+    'images' => [
+        'hero' => 'assets/images/hero.jpg', // Startseite Hauptbild
+        'about' => 'assets/images/about.jpg', // aboutseite Bild
     ],
     // Services
     'services' => [
